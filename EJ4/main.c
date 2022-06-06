@@ -1,9 +1,9 @@
 /*!
  * @file    main.c
- * @brief   Implementar una función que compute el promedio de dos números enteros y almacene el resultado de la operación en una variable
- *          pasada por referencia.
+ * @brief   Implementar una función que convierta un número en grados decimales, a su equivalente en grados, minutos y segundos, retornando
+ *          dichos valores en variables pasadas por referencia.
  * @author  Enzo Belmonte <ebelmonte@frba.utn.edu.ar>
- * @date    03/06/2022
+ * @date    06/06/2022
  * @details Para compilar, linkear y ejecutar: Ver compilar.sh
  */
 #include <stdio.h>
@@ -11,11 +11,19 @@
 
 int main(void)
 {
-    float resultado=0;
+    int grados=0, minutos=0, segundos=0;
 
-    promedio(10, 4, &resultado); // Ejemplo promedio de 10 y 4
-    printf("El promedio es: %f\n",resultado);
-    promedio(7, 9, &resultado); // Ejemplo promedio de 7 y 9
-    printf("El promedio es: %f\n",resultado);
+    a_grados_sexagesimales(275.4, &grados, &minutos, &segundos);// ejemplo con 275.4°
+    printf("%d° %d' %d\"\n",grados, minutos, segundos);
+
+    a_grados_sexagesimales(125.34, &grados, &minutos, &segundos);// ejemplo con 125.34°
+    printf("%d° %d' %d\"\n",grados, minutos, segundos);
+
+    a_grados_sexagesimales(90, &grados, &minutos, &segundos);// ejemplo con 90°
+    printf("%d° %d' %d\"\n",grados, minutos, segundos);
+
+    a_grados_sexagesimales(9.1218, &grados, &minutos, &segundos);// ejemplo con 9.1218°
+    printf("%d° %d' %d\"\n",grados, minutos, segundos);
+
     return 0;
 }

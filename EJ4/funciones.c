@@ -1,18 +1,22 @@
 /*!
  * @file    funciones.c
- * @brief   Implementar una función que compute el promedio de dos números enteros y almacene el resultado de la operación en una variable
- *          pasada por referencia.
+ * @brief   Implementar una función que convierta un número en grados decimales, a su equivalente en grados, minutos y segundos, retornando
+ *          dichos valores en variables pasadas por referencia.
  * @author  Enzo Belmonte <ebelmonte@frba.utn.edu.ar>
- * @date    03/06/2022
+ * @date    06/06/2022
  */
 #include "funciones.h"
 #include <stdio.h>
 
-void promedio(int x, int y, float* resultado)
+void a_grados_sexagesimales(float grados_decimales, int* grados, int* minutos, int* segundos)
 {
-    if (resultado != NULL)
+    if ((grados != NULL) && (minutos != NULL) && (segundos != NULL))
     {
-        *resultado=(float)(x+y)/2;
+        float aux=0;
+        *grados=grados_decimales;
+        aux=(grados_decimales-*grados)*MINUTOS;
+        *minutos=aux;
+        *segundos=(aux-*minutos)*SEGUNDOS;
     }
     else
     {
