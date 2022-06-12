@@ -8,6 +8,6 @@
 #   Opcion 2) chmod +x compilar.sh
 #             ./compilar.sh
 
-gcc -c funciones.c -o funciones.o -Wall
+gcc -c funciones.c -o funciones.o -Wall 
 gcc -c main.c -o main.o -Wall
-gcc funciones.o main.o -o EJ
+gcc funciones.o main.o -o EJ -lm
