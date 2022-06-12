@@ -14,6 +14,8 @@ int main(void)
 {
     double vector_a[3]={2,3,4};
     double vector_b[3]={4,5,7};
+    double vector_mira[3]={2,3,4};
+    double vector_enemigo[3]={4,5,7};
     double producto=0, norma=0, angulo=0;
     int apuntado=0;
 
@@ -26,7 +28,7 @@ int main(void)
     angulo=angulo_entre_vec3(vector_a, vector_b); // Ejemplo angulo entre {2,3,4} y {4,5,7}
     printf("El angulo entre los vectores es: %f\n", angulo);
 
-    apuntado=esta_apuntando_al_enemigo(, , ANGULO_LIMITE);
-    printf("El resultado de la funcion <esta_apuntando_al_enemigo> es: %d", apuntado);
+    apuntado=esta_apuntando_al_enemigo(vector_mira, vector_enemigo, ANGULO_LIMITE);
+    printf("El resultado de la funcion <esta_apuntando_al_enemigo> es: %d\n", apuntado);
     return 0;
 }

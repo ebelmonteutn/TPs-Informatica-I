@@ -7,7 +7,6 @@
  */
 #include "funciones.h"
 #include <math.h>
-#include <stdio.h>
 
 double producto_escalar_vec3(const double* vector_a, const double* vector_b)
 {
@@ -42,5 +41,15 @@ double angulo_entre_vec3(const double* vector_a, const double* vector_b)
 
 int esta_apuntando_al_enemigo(const double* vector_mira, const double* vector_enemigo, double angulo_limite)
 {
-
+    double angulo=0;
+    angulo=angulo_entre_vec3(vector_mira, vector_enemigo);
+    if (angulo < angulo_limite)
+    {
+        return 1;
+    }
+    else
+    {
+        return 0;
+    }
+    
 }
