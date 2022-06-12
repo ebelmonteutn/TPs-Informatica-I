@@ -7,7 +7,7 @@
  */
 #ifndef FUNCIONES_H_
 #define FUNCIONES_H_
-
+#define DIMENSION 3
 
 /*!
  * @brief Función que computa el producto escalar de dos vectores de dimensión 3 
