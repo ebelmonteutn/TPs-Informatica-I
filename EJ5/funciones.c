@@ -1,7 +1,9 @@
 /*!
  * @file    funciones.c
- * @brief   Implementar una función que reciba un arreglo y su longitud y retorne 1 si el mismo se encuentra ordenado (de menor a mayor) y 0 en
- *          caso contrario
+ * @brief   Implementar una función que computa el producto escalar de dos vectores de dimensión 3, 
+ *          función que computa la norma de un vector de dimensión 3, 
+ *          función que computa el ángulo de separación (en radianes) entre dos vectores y 
+ *          una función que comprueba si un enemigo está siendo apuntado por el jugador.
  * @author  Enzo Belmonte <ebelmonte@frba.utn.edu.ar>
  * @date    13/06/2022
  */
